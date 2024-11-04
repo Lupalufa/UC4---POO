@@ -1,0 +1,15 @@
+{
+  "name": "uc4---poo",
+  "version": "1.0.0",
+  "description": "Todos os projetos sobre a UC4 dos projetos orientados a objetos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
