@@ -7,7 +7,7 @@ class Jogador {
     }
 
     get getNome(){
-        return this.#nome = nome
+        return this.#nome
     }
     
     set setNome(nome){
@@ -15,12 +15,20 @@ class Jogador {
     }
 
     get getAposta(){
-        return this.#aposta = aposta
+        return this.#aposta
     }
 
     set setAposta(aposta){
         this.#aposta = aposta
     }
+
+    apresentarDados(){
+        console.log(`Nome do jogador: ${this.getNome} e o numero da aposta: ${this.getAposta}`)
+    }
 }
 
 module.exports = { Jogador }
+
+let jogador1 = new Jogador("Pedin Do Grau", 5)
+
+jogador1.apresentarDados()
