@@ -53,10 +53,29 @@ const prompt = require("prompt-sync")();
 
 // Aula 04 do dia 05 do 11 de 2024
 
-const { Animal } = require('./Aula 4 [] 05 do 11/animais')
-const { Cachorro } =  require("./Aula 4 [] 05 do 11/cachorro")
+// const { Animal } = require('./Aula 4 [] 05 do 11/animais')
+// const { Cachorro } =  require("./Aula 4 [] 05 do 11/cachorro")
 
 
-let a1 = new Animal("Joel", 14, "marrom")
-let c1 = new Cachorro("SRD","Joel",15,"Preto")
+// let a1 = new Animal("Joel", 14, "marrom")
+// let c1 = new Cachorro("Joel","SRD",15,"Preto")
 
+// c1.emitirSom()
+// a1.emitirSom()
+
+// ================================================================================================================
+
+// Aula 6 do dia 06 do 11 de 2024
+
+const {Conta} = require("./Aula 6 [] 06 do 11/Conta")
+const {Poupanca} = require("./Aula 6 [] 06 do 11/ContaPoupanca")
+
+const minhaPoupanca = new Poupanca("Jorel", 5)
+console.log(minhaPoupanca.getSaldo)
+minhaPoupanca.setSaldo = 5000
+
+minhaPoupanca.atualizarRendimentos(90000)
+
+minhaPoupanca.sacar(1000)
+
+console.log(minhaPoupanca.getSaldo)
