@@ -65,17 +65,39 @@ const prompt = require("prompt-sync")();
 
 // ================================================================================================================
 
-// Aula 6 do dia 06 do 11 de 2024
+// Aula 5 do dia 06 do 11 de 2024
 
-const {Conta} = require("./Aula 6 [] 06 do 11/Conta")
-const {Poupanca} = require("./Aula 6 [] 06 do 11/ContaPoupanca")
+// const {Conta} = require("./Aula 5 [] 06 do 11/Conta")
+// const {Poupanca} = require("./Aula 5 [] 06 do 11/ContaPoupanca")
 
-const minhaPoupanca = new Poupanca("Jorel", 5)
-console.log(minhaPoupanca.getSaldo)
-minhaPoupanca.setSaldo = 5000
+// const minhaPoupanca = new Poupanca("Jorel", 5)
+// console.log(minhaPoupanca.getSaldo)
+// minhaPoupanca.setSaldo = 5000
 
-minhaPoupanca.atualizarRendimentos(90000)
+// minhaPoupanca.atualizarRendimentos(90000)
 
-minhaPoupanca.sacar(1000)
+// minhaPoupanca.sacar(1000)
 
-console.log(minhaPoupanca.getSaldo)
+// console.log(minhaPoupanca.getSaldo)
+
+
+// ================================================================================================
+
+// Aula 6 do dia 07 do 11 de 2024
+
+const {Animal} = require("./Aula 6 [] 07 do 11/animal")
+const {Ave} = require("./Aula 6 [] 07 do 11/ave")
+const {Mamifero} = require("./Aula 6 [] 07 do 11/mamifero")
+
+const pessoa1 = new Animal("Pedro Lucas",20)
+console.log(pessoa1.getInfo())
+pessoa1.emitirSom()
+
+const cachorro1 = new Mamifero("Julios",3,"Dourado","casa")
+console.log(cachorro1.getInfo())
+cachorro1.emitirSom()
+
+const galinha1 = new Ave("Jubileuda",2,"Cônico","Não tem")
+
+console.log(galinha1.getInfo())
+cachorro1.emitirSom()
