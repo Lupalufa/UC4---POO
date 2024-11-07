@@ -100,4 +100,4 @@ cachorro1.emitirSom()
 const galinha1 = new Ave("Jubileuda",2,"Cônico","Não tem")
 
 console.log(galinha1.getInfo())
-cachorro1.emitirSom()
+galinha1.emitirSom()
