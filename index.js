@@ -85,19 +85,22 @@ const prompt = require("prompt-sync")();
 
 // Aula 6 do dia 07 do 11 de 2024
 
-const {Animal} = require("./Aula 6 [] 07 do 11/animal")
-const {Ave} = require("./Aula 6 [] 07 do 11/ave")
-const {Mamifero} = require("./Aula 6 [] 07 do 11/mamifero")
+// const {Animal} = require("./Aula 6 [] 07 do 11/animal")
+// const {Ave} = require("./Aula 6 [] 07 do 11/ave")
+// const {Mamifero} = require("./Aula 6 [] 07 do 11/mamifero")
 
-const pessoa1 = new Animal("Pedro Lucas",20)
-console.log(pessoa1.getInfo())
-pessoa1.emitirSom()
+// const pessoa1 = new Animal("Pedro Lucas",20)
+// console.log(pessoa1.getInfo())
+// pessoa1.emitirSom()
 
-const cachorro1 = new Mamifero("Julios",3,"Dourado","casa")
-console.log(cachorro1.getInfo())
-cachorro1.emitirSom()
+// const cachorro1 = new Mamifero("Julios",3,"Dourado","casa")
+// console.log(cachorro1.getInfo())
+// cachorro1.emitirSom()
 
-const galinha1 = new Ave("Jubileuda",2,"Cônico","Não tem")
+// const galinha1 = new Ave("Jubileuda",2,"Cônico","Não tem")
 
-console.log(galinha1.getInfo())
-galinha1.emitirSom()
+// console.log(galinha1.getInfo())
+// galinha1.emitirSom()
+
+// ================================================================================================
+
