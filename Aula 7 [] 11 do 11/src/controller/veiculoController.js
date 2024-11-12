@@ -1,7 +1,8 @@
 const { Veiculo } = require("../models/Veiculo")
 const { Carro } = require("../models/Carro")
 const { Moto } = require("../models/Moto")
-const bancoVeiculo = []
+const { bancoVeiculo } = require("../config/banco")
+
 
 class VeiculoController {
 
@@ -39,6 +40,41 @@ class VeiculoController {
         else {
             console.log("Nenhum veiculo registrado!")
         }
+    }
+    buscarId(indice){
+        if(bancoVeiculo.length >= indice - 1){
+            return true;
+        }
+        return false
+    }
+
+    editarVeiculo(indice, novosDados){
+        try {
+                const novoVeiculo = bancoVeiculo[indice - 1]
+                if(novosDados.ano){
+                    novoVeiculo.setAno = novosDados.ano 
+                }
+                if(novosDados.marca){
+                    novoVeiculo.setMarca = novosDados.marca
+                }
+                if(novosDados.modelo){
+                    novoVeiculo.setModelo = novosDados.modelo
+                }
+                if(novosDados.cor){
+                    novoVeiculo.setCor = novosDados.cor 
+                }
+                console.log("Veiculo Atualizado com sucesso")
+                novoVeiculo.getInfo();
+                bancoVeiculo[indice - 1] = novoVeiculo;
+
+        } catch (error) {
+            
+        }
+    }
+
+
+    excluirVeiculo(){
+
     }
 }
 
