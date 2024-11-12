@@ -6,7 +6,9 @@ function exibirMenu(){
     console.log("======================")
     console.log("1° - Adicionar Veiculo")
     console.log("2° - listar Veiculos")
-    console.log("3° - Sair")
+    console.log("3° - Editar Veiculos")
+    console.log("4° - Excluir Veiculo")
+    console.log("0° - Sair do sistema ")
     console.log("======================")
 }
 
@@ -14,8 +16,11 @@ function iniciarSistema(){
     let opcao;
     do{
         exibirMenu()
-        opcao = parseInt(prompt("Digite uma opção:"))
+        opcao = parseInt(prompt("Digite uma opção de 0 a 4:"))
         switch (opcao) {
+            case 0:
+                console.log("Saindo do sistema...")
+                break;
             case 1:
                 adicionarVeiculos()
                 break;
@@ -23,11 +28,15 @@ function iniciarSistema(){
                 Controller.listarVeiculos()
                 break;
             case 3:
-                console.log("Saindo do sistema...")
+                editarVeiculos()
+                break;
+            case 4:
+                excluirVeiculos()
+                break;
             default:
                 console.log("Opção inválido")
         }
-    }while(opcao !== 3)
+    }while(opcao !== 0)
 }
 
 function adicionarVeiculos() {
@@ -39,6 +48,32 @@ function adicionarVeiculos() {
 
     Controller.criarVeiculo(tipo,ano,marca,modelo,cor)
 }
+
+function editarVeiculos() {
+    Controller.listarVeiculos()
+    const indice = parseInt(prompt("Digite o indice desejado: "))
+    const result = Controller.buscarId(indice) 
+    if(result){
+        console.log("informe os novos dados (pressione Enter para manter o valor atual)")
+        const ano = prompt("Novo Ano:")
+        const marca = prompt("Nova Marca:")
+        const modelo = prompt("Novo modelo:")
+        const cor = prompt ("Nova cor:")
+        const novosDados = {}
+        if(ano) novosDados.ano = ano
+        if(marca) novosDados.marca = marca
+        if(modelo) novosDados.modelo = modelo
+        if(cor) novosDados.cor = cor
+        Controller.editarVeiculo(indice, novosDados)
+    }
+    else{
+        console.log("Informe um indice valido")
+    }
+}
+
+// excluirVeiculos() {
+
+// }
 
 iniciarSistema()
 
