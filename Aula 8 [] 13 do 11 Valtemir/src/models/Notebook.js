@@ -15,11 +15,22 @@ class Notebook {
         return this.marca
     }
 
+    set setMarca(novaMarca){
+        this.marca = novaMarca
+    }
+
     get getModelo(){
         return this.modelo
     }
+    set setModelo(novoModelo){
+        this.modelo = novoModelo
+    }
     get getCor(){
         return this.cor
+    }
+
+    set setCor(novaCor){
+        this.cor = novaCor
     }
     get getPreco(){
         return this.preco
