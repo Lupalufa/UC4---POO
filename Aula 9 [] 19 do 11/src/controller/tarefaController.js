@@ -30,30 +30,31 @@ class TarefaController {
 
     listarTarefas(id){
         try{
-        if(id.toLowerCase === 'Tarefas'){
-            console.log(" ==== Tarefas Registradas ====")
-            dataBaseTarefas.forEach((tarefas, index) => {
-                console.log(`${index + 1}`)
-                tarefas.getInfo();
-            });
-        }
-        else if(id.toLowerCase === 'TarefasPS'){
-            console.log(" ==== Tarefas Registradas ====")
-            dataBaseTarefas.forEach((tarefas, index) => {
-                console.log(`${index + 1}`)
-                tarefas.getInfo();
-            });
-        }
-        else if(id.toLowerCase === 'TarefasPF'){
-            console.log(" ==== Tarefas Registradas ====")
-            dataBaseTarefas.forEach((tarefas, index) => {
-                console.log(`${index + 1}`)
-                tarefas.getInfo();
-            });
-        }
-        else{
+            if(id.toLowerCase() === 'tarefas'){
+            console.log(" ===== Tarefas Registradas ===== ")
+            const filtro = dataBaseTarefas.filter(id => id instanceof Tarefas)
+            filtro.forEach((tarefas) => {
+                tarefas.getInfo()
+            })
+          }
+            else if(id.toLowerCase() === 'tarefasps'){
+            console.log(" ===== Tarefas Registradas ===== ")
+            const filtro = dataBaseTarefas.filter(id => id instanceof TarefasPessoais)
+            filtro.forEach((tarefas) => {
+                tarefas.getInfo()
+            })
+          }
+            else if(id.toLowerCase() === 'tarefaspf'){
+            console.log(" ===== Tarefas Registradas ===== ")
+            const filtro = dataBaseTarefas.filter(id => id instanceof TarefasProfissionais)
+            filtro.forEach((tarefas) => {
+                tarefas.getInfo()
+            })
+          }
+            else{
             console.log("Nenhuma Tarefa foi registrada!")
-        }
+          }
+
     }catch(error){
         console.error("Não foi possivel listar esta tarefa", error.message)
     }
